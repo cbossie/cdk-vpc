@@ -38,7 +38,7 @@ namespace CdkVpc
                 EnableDnsHostnames = true,
                 EnableDnsSupport = true
             };
-            var vpc = new Vpc(this, id + "_vpc", props);
+            var vpc = new Vpc(this, id + $"{id}-vpc", props);
 
             this.Vpc = vpc;
         }

@@ -9,17 +9,25 @@ namespace CdkVpc
     {
         public static void Main(string[] args)
         {
+
+            var stackName = "CdkVpcStack";
+            var account = "014168299099";
+            var region = "us-east-1";
+
             var app = new App();
             var env = new Amazon.CDK.Environment
             {
-                Region = "eu-west-3",
-                Account = "014168299099"
+                Region = region,
+                Account = account
             };
 
-            new CdkVpcStack(app, "CdkVpcStack", new StackProps
+            new CdkVpcStack(app, stackName , new StackProps
             {
-                Env = env
-            });
+                Env = env,
+            })
+            {
+                Cidr = "10.0.0.0/16"
+            };
             app.Synth();
         }
     }
