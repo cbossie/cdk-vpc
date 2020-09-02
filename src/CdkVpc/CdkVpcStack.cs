@@ -9,7 +9,7 @@ namespace CdkVpc
         : base(scope, id, props)
         {
             // The code that defines your stack goes here
-            var vpc = new CustomVpc(this, $"{id}-cvpc", Cidr);
+            var vpc = new CustomVpc(this, $"{id}", Cidr);
         }
     }
 }

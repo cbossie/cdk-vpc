@@ -9,6 +9,9 @@ namespace CdkVpc
         public CustomVpc(Construct scope, string id, string cidr) 
         : base(scope, id)
         {
+
+            
+
             SubnetConfiguration privateSubnetConfig = new SubnetConfiguration
             {
                 CidrMask = 26,
@@ -22,7 +25,6 @@ namespace CdkVpc
                 CidrMask = 26,
                 SubnetType = SubnetType.PUBLIC,
                 Name = "publicSubnet"
-
             };
 
             VpcProps props = new VpcProps
@@ -34,7 +36,7 @@ namespace CdkVpc
                     privateSubnetConfig,
                     publicSubnetConfig
                 },
-                NatGateways = 1,
+                NatGateways = 99,
                 EnableDnsHostnames = true,
                 EnableDnsSupport = true
             };

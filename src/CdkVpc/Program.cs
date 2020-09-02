@@ -12,7 +12,7 @@ namespace CdkVpc
 
             var stackName = "CdkVpcStack";
             var account = "014168299099";
-            var region = "us-east-1";
+            var region = "us-east-2";
 
             var app = new App();
             var env = new Amazon.CDK.Environment
